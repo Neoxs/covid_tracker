@@ -40,7 +40,7 @@ const Chart = () => {
     )
 
     return (
-        <div container>
+        <div className={styles.container}>
             {lineChart}
         </div>
     )
