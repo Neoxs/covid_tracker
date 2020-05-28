@@ -8,14 +8,14 @@ const Chart = () => {
     const [dailyData, setDailyData] = useState([])
 
     useEffect(() => {
-        const fetchAPI = async () => {
-            setDailyData(await fetchDailyData())
-        }
-
-        console.log(dailyData)
-
-        fetchAPI()
-    })
+        const fetchMyAPI = async () => {
+          const initialDailyData = await fetchDailyData();
+    
+          setDailyData(initialDailyData);
+        };
+    
+        fetchMyAPI();
+      }, []);
 
     const lineChart = (
         dailyData.length
